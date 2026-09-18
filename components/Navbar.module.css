@@ -1,0 +1,158 @@
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  padding: clamp(1.25rem, 2.5vw, 2.25rem) clamp(1.5rem, 4vw, 4rem);
+  pointer-events: none;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  pointer-events: auto;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.brandLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1rem, 1.25vw, 1.35rem);
+  letter-spacing: -0.02em;
+  color: var(--fg-primary);
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.brandLink:hover {
+  opacity: 0.75;
+}
+
+.copyright {
+  font-size: 0.85em;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+.name {
+  letter-spacing: 0.04em;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--fg-muted);
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 0.6;
+  }
+}
+
+.locationInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: var(--fg-muted);
+}
+
+.locationLabel {
+  font-weight: 500;
+  opacity: 0.75;
+}
+
+.liveClock {
+  font-family: monospace;
+  font-weight: 600;
+  color: var(--fg-primary);
+}
+
+.roleBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  max-width: 320px;
+  gap: 0.25rem;
+}
+
+.roleTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(0.85rem, 1vw, 1rem);
+  letter-spacing: 0.12em;
+  color: var(--fg-primary);
+}
+
+.roleSubtitle {
+  font-size: clamp(0.75rem, 0.85vw, 0.825rem);
+  color: var(--fg-muted);
+  line-height: 1.4;
+}
+
+/* Mobile & Tablet */
+@media (max-width: 768px) {
+  .locationInfo {
+    display: none;
+  }
+
+  .roleBlock {
+    max-width: 180px;
+  }
+
+  .roleSubtitle {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 1.25rem 1rem;
+  }
+
+  .brandLink {
+    font-size: 0.95rem;
+  }
+
+  .statusBadge {
+    font-size: 0.65rem;
+  }
+
+  .roleTitle {
+    font-size: 0.75rem;
+  }
+}

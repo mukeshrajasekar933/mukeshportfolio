@@ -1,0 +1,22 @@
+.projectsSection {
+  position: relative;
+  width: 100%;
+  padding-top: clamp(6rem, 12vh, 9rem);
+  background-color: var(--bg-primary);
+}
+
+.sectionHeader {
+  max-width: 800px;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.sectionLead {
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  color: var(--fg-secondary);
+  line-height: 1.5;
+}
+
+.projectsList {
+  display: flex;
+  flex-direction: column;
+}

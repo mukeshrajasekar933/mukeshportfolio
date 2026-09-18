@@ -1,0 +1,85 @@
+.footer {
+  position: relative;
+  width: 100%;
+  padding: clamp(2rem, 4vh, 3.5rem) 0 clamp(5.5rem, 8vh, 7rem); /* Extra bottom padding so floating dock doesn't overlap */
+  background-color: #040405;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.footerMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.copyrightBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.yearName {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+}
+
+.roleSub {
+  font-size: 0.725rem;
+  letter-spacing: 0.15em;
+  color: var(--fg-muted);
+}
+
+.centerCredit {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--fg-subtle);
+  text-transform: uppercase;
+}
+
+.backToTopBlock {
+  display: flex;
+  align-items: center;
+}
+
+.backToTopBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border-subtle);
+  transition: color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.backToTopBtn:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .footerMain {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .centerCredit {
+    order: 3;
+  }
+
+  .backToTopBlock {
+    order: 2;
+  }
+}

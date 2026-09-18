@@ -4,6 +4,7 @@ import React from "react";
 import styles from "./Footer.module.css";
 import { ArrowUp } from "lucide-react";
 import { useMagnetic } from "@/lib/gsap/useMagnetic";
+import Logo from "./Logo";
 
 export default function Footer() {
   const magneticBackToTop = useMagnetic<HTMLButtonElement>({ strength: 0.3 });
@@ -20,8 +21,11 @@ export default function Footer() {
         <div className={styles.footerMain}>
           {/* Left Block */}
           <div className={styles.copyrightBlock}>
-            <span className={styles.yearName}>© 2026 MUKESH R</span>
-            <span className={styles.roleSub}>FULL STACK DEVELOPER</span>
+            <Logo size={30} showGlow={false} />
+            <div className={styles.copyrightText}>
+              <span className={styles.yearName}>© 2026 MUKESH R</span>
+              <span className={styles.roleSub}>FULL STACK DEVELOPER</span>
+            </div>
           </div>
 
           {/* Center Credit */}

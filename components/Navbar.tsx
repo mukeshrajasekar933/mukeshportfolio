@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
+import Logo from "./Logo";
 
 export default function Navbar() {
   const [timeString, setTimeString] = useState("");
@@ -28,11 +29,13 @@ export default function Navbar() {
   return (
     <header className={styles.navbar} id="site-header">
       <div className={styles.container}>
-        {/* Top-Left: © MUKESH R */}
+        {/* Top-Left: Logo + MUKESH R */}
         <div className={styles.brand}>
           <a href="#hero" className={styles.brandLink}>
-            <span className={styles.copyright}>©</span>
-            <span className={styles.name}>MUKESH R</span>
+            <Logo size={36} />
+            <div className={styles.brandInfo}>
+              <span className={styles.name}>MUKESH R</span>
+            </div>
           </a>
           <span className={styles.statusBadge}>
             <span className={styles.statusDot} />
